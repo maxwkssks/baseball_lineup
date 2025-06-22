@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>야구 라인업 작성</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>야구 라인업 작성</h1>
+
+  <form id="lineupForm">
+    <div id="inputs">
+      <!-- 반복적으로 1~9번까지 입력 필드 -->
+    </div>
+    <button type="button" id="confirmBtn">라인업 확정</button>
+  </form>
+
+  <div id="lineupResultWrapper" style="display: none;">
+    <h2>확정된 라인업</h2>
+    <div id="lineupResult"></div>
+    <a id="downloadBtn" href="#" download="lineup.png">이미지 저장</a>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
