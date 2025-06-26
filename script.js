@@ -1,10 +1,10 @@
 const teamImages = {
-  plants: "830dd136-b11a-4380-99d3-52413a52bc48.png",
-  whales: "e8046d44-3919-4ace-99ec-ebd0b1877ca1.png",
+  plants: "PLA.png",
+  whales: "WHA.png",
   krakens: "PPAP.png",
-  lax: "8ca935bb-4a43-466f-b570-a723795d0c8f.png",
-  monkeys: "3db7bfd4-13b9-478f-99bf-7d0acb63f258.png",
-  marines: "8f918a43-3dad-46c8-82c6-cd35269bfc59.png",
+  Rox: "ROX.png",
+  monkeys: "Monk.png",
+  marines: "MAR.png",
 };
 
 let selectedTeam = "krakens";
