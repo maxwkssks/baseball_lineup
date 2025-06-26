@@ -6,17 +6,31 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>야구 라인업 작성</h1>
+  <h1>⚾ 야구 라인업 작성기</h1>
+
+  <div class="game-info">
+    <label>경기 시간: <input type="text" id="gameTime" placeholder="예: 13:00"></label>
+    <label>경기장: <input type="text" id="stadium" placeholder="예: 고척돔"></label>
+    <label>VS 매치업: <input type="text" id="matchup" placeholder="예: 플랜츠 vs 웨일즈"></label>
+  </div>
+
+  <div class="team-buttons">
+    <button onclick="selectTeam('plants')">플랜츠</button>
+    <button onclick="selectTeam('whales')">웨일즈</button>
+    <button onclick="selectTeam('krakens')">크라켄즈</button>
+    <button onclick="selectTeam('lax')">락스</button>
+    <button onclick="selectTeam('monkeys')">몽키즈</button>
+    <button onclick="selectTeam('marines')">마린스</button>
+  </div>
 
   <form id="lineupForm">
-    <div id="inputs">
-      <!-- 반복적으로 1~9번까지 입력 필드 -->
+    <div id="inputs"></div>
+    <div class="submit-wrapper">
+      <button type="button" id="confirmBtn">라인업 확정</button>
     </div>
-    <button type="button" id="confirmBtn">라인업 확정</button>
   </form>
 
   <div id="lineupResultWrapper" style="display: none;">
-    <h2>확정된 라인업</h2>
     <div id="lineupResult"></div>
     <a id="downloadBtn" href="#" download="lineup.png">이미지 저장</a>
   </div>

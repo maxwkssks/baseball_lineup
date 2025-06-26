@@ -1,49 +1,95 @@
 body {
   font-family: Arial, sans-serif;
   padding: 20px;
+  background-color: #f4f4f4;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.game-info {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.game-info input {
+  margin: 0 10px;
+  padding: 6px;
+  width: 150px;
+}
+
+.team-buttons {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.team-buttons button {
+  margin: 5px;
+  padding: 10px 16px;
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.team-buttons button:hover {
+  background-color: #005fa3;
 }
 
 .player-input {
   margin-bottom: 10px;
-}
-
-#lineupResult {
-  position: relative;
-  padding: 20px;
-  border: 2px solid #333;
-  width: 300px;
-  background: #f9f9f9;
-  overflow: hidden;
-}
-
-/* 배경 이미지 스타일 */
-#lineupResult .bg-img {
-  position: absolute;
-  top: 80px;      /* 텍스트 위치에 맞게 */
-  left: 50px;     /* 중앙보다 살짝 오른쪽 */
-  width: 260px;   /* 너비 */
-  height: 300px;  /* 높이 */
-  opacity: 0.5;  /* 투명도 */
-  z-index: 0;
-}
-
-/* 텍스트는 위로 */
-#lineupResult p,
-#lineupResult h2 {
-  position: relative;
-  z-index: 1;
-}
-
-#lineupResult h2 {
-  font-size: 20px;
-  color: #003366;
-  font-weight: bold;
-  border-bottom: 2px solid #003366;
-  padding-bottom: 5px;
-  margin-bottom: 10px;
   text-align: center;
+}
+
+.submit-wrapper {
+  text-align: center;
+  margin-top: 20px;
 }
 
 #lineupResultWrapper {
   margin-top: 30px;
+  text-align: center;
+}
+
+#lineupResult {
+  position: relative;
+  margin: 0 auto;
+  padding: 20px;
+  border: 2px solid #333;
+  width: 350px;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.bg-img {
+  position: absolute;
+  top: 80px;
+  left: 40px;
+  width: 260px;
+  height: 300px;
+  opacity: 0.5;
+  z-index: 0;
+}
+
+#lineupResult h2,
+#lineupResult p {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+#lineupResult h2 {
+  font-size: 22px;
+  color: #003366;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #003366;
+  padding-bottom: 5px;
+}
+
+#lineupResult p.info {
+  font-weight: bold;
+  margin-bottom: 10px;
 }

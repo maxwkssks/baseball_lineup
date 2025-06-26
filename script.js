@@ -1,3 +1,18 @@
+const teamImages = {
+  plants: "830dd136-b11a-4380-99d3-52413a52bc48.png",
+  whales: "e8046d44-3919-4ace-99ec-ebd0b1877ca1.png",
+  krakens: "PPAP.png",
+  lax: "8ca935bb-4a43-466f-b570-a723795d0c8f.png",
+  monkeys: "3db7bfd4-13b9-478f-99bf-7d0acb63f258.png",
+  marines: "8f918a43-3dad-46c8-82c6-cd35269bfc59.png",
+};
+
+let selectedTeam = "krakens";
+
+function selectTeam(team) {
+  selectedTeam = team;
+}
+
 document.addEventListener("DOMContentLoaded", function () {
   const inputs = document.getElementById("inputs");
   for (let i = 1; i <= 9; i++) {
@@ -13,11 +28,17 @@ document.addEventListener("DOMContentLoaded", function () {
     const resultBox = document.getElementById("lineupResult");
     resultBox.innerHTML = "";
 
-    // ✅ 이미지 추가 (크기 조절 포함)
-    resultBox.innerHTML += `<img src="PPAP.png" class="bg-img" alt="배경 이미지">`;
+    const time = document.getElementById("gameTime").value.trim();
+    const stadium = document.getElementById("stadium").value.trim();
+    const matchup = document.getElementById("matchup").value.trim();
+    const title = teamTitle(selectedTeam);
 
-    // ✅ 타이틀
-    resultBox.innerHTML += `<h2 style="text-align:center; margin-bottom: 15px;">⚾ 크라켄즈 라인업 ⚾</h2>`;
+    resultBox.innerHTML += `<img src="${teamImages[selectedTeam]}" class="bg-img" alt="팀 배경">`;
+
+    resultBox.innerHTML += `
+      <h2>${title}</h2>
+      <p class="info">🕒 ${time} | 🏟 ${stadium} | ⚔ ${matchup}</p>
+    `;
 
     for (let i = 1; i <= 9; i++) {
       const pos = document.getElementById(`pos${i}`).value.trim();
@@ -34,3 +55,15 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+function teamTitle(team) {
+  switch (team) {
+    case "plants": return "🌿 플랜츠 라인업 🌿";
+    case "whales": return "🐋 웨일즈 라인업 🐋";
+    case "krakens": return "🦑 크라켄즈 라인업 🦑";
+    case "lax": return "🦁 락스 라인업 🦁";
+    case "monkeys": return "🐒 몽키즈 라인업 🐒";
+    case "marines": return "⚓ 마린스 라인업 ⚓";
+    default: return "라인업";
+  }
+}
